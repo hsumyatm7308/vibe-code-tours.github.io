@@ -288,6 +288,138 @@
   },
   "setup": {
     "title": "Setup Guide — Vibe Code Tours",
-    "description": "Get your machine ready before Chapter 1 — Linux, macOS, or Windows (WSL). Node, Python, Git, Claude Code, editor + extensions."
+    "description": "Get your machine ready before Chapter 1 — Linux, macOS, or Windows (WSL). Node, Python, Git, Claude Code, editor + extensions.",
+    "h1": "Setup Guide",
+    "intro1": "Get your machine ready before Chapter 1. ~45–60 min (90 if new to the terminal). Works on Linux, macOS, and Windows (via WSL).",
+    "intro2": "You'll install: a code editor, Node, Python, Git, and Claude Code — then verify it all.",
+    "fastH": "Fast path (one command)",
+    "fastIntro": "Comfortable in a terminal? This installs everything + verifies:",
+    "fastTarget": "Safe to re-run. At the end you want: Passed: 6, Failed: 0.",
+    "fastGist": "Source and this guide live on the gist.",
+    "fastWindows": "Windows: install WSL first (Step 0), then run that inside Ubuntu. The script doesn't do the editor (Step 5) or GitHub SSH (Step 6) — do those manually.",
+    "s0H": "Step 0 — Windows only: install WSL",
+    "s0Body": "Native Windows isn't supported directly — you run everything inside WSL (real Linux inside Windows). In PowerShell (Admin):",
+    "s0After": "Reboot, open Ubuntu from Start. Everything below runs there. macOS / Linux: skip this step.",
+    "s1H": "Step 1 — Node.js (via nvm)",
+    "s1Note": "#1 setup mistake: forgetting to close + reopen the terminal after installing nvm. Do it.",
+    "s2H": "Step 2 — Python (via uv)",
+    "s3H": "Step 3 — Git",
+    "s4H": "Step 4 — Claude Code",
+    "s4Note": "A friendly reply means your install, network, and account all work.",
+    "s5H": "Step 5 — Code editor",
+    "s5Intro": "Pick one (both free, both VS Code-based, so the same extensions work in either):",
+    "s5VsCode": "the standard",
+    "s5Antigravity": "Google's AI-first editor (VS Code fork)",
+    "s5ExtH": "Recommended extensions (install in either)",
+    "s5Forks": "Forks like Antigravity may use the Open VSX registry — all the above are on both, so search-and-install works the same.",
+    "colExt": "Extension",
+    "colWhy": "Why",
+    "colTool": "Tool",
+    "colLicense": "License",
+    "colInstall": "Install",
+    "colNeeds": "Needs",
+    "colSymptom": "Symptom",
+    "colFix": "Fix",
+    "s6H": "Step 6 — GitHub account + SSH",
+    "s6Intro": "The riskiest step — don't skip the verification.",
+    "s6Never": "Never share the private key (~/.ssh/id_ed25519, the file without .pub).",
+    "s7H": "Step 7 — Verify everything",
+    "s7Intro": "Run the verifier (the fast-path script does this automatically):",
+    "s7Target": "Target: Passed: 6, Failed: 0.",
+    "troubleH": "Troubleshooting",
+    "troubleStuck": "Still stuck? Post the exact error in the cohort channel #setup-help. The exact error is easy to help; \"it doesn't work\" is not.",
+    "ossH": "Optional — other AI coding tools (free / open-source)",
+    "ossIntro": "Not required. Claude Code is our default, but the Tour is about the landscape — Chapter 7 explores alternatives. All free + open-source; each needs its own provider account (some free tiers).",
+    "ossNote": "Also worth knowing (not on our install list): Aider and llm — open-source CLIs that run local open models via Ollama, fully free + offline. We point to them in Chapter 7. Don't install everything day one — pick one, form an opinion.",
+    "doneH": "What you'll have when done",
+    "doneList": [
+      "VS Code or Antigravity + extensions",
+      "Node 22 + npm, Python 3.12 (via uv)",
+      "Git + GitHub SSH connected",
+      "Claude Code, running its first command",
+      "All 6 verify checks green"
+    ],
+    "doneTax": "That's the one-time tax. Pay it once, then never touch it again. See you in Chapter 1.",
+    "back": "← Back to curriculum",
+    "editors": [
+      {
+        "ext": "Python (ms-python.python)",
+        "why": "Python language support, run/debug"
+      },
+      {
+        "ext": "ESLint + Prettier",
+        "why": "JS/TS linting + auto-format"
+      },
+      {
+        "ext": "GitLens",
+        "why": "See git history/blame inline"
+      },
+      {
+        "ext": "Error Lens",
+        "why": "Errors shown inline, not just underlined"
+      },
+      {
+        "ext": "Markdown All in One",
+        "why": "The Tour writes a lot of markdown"
+      },
+      {
+        "ext": "GitHub Pull Requests",
+        "why": "Manage PRs without leaving the editor"
+      },
+      {
+        "ext": "Path Intellisense",
+        "why": "Autocomplete file paths"
+      }
+    ],
+    "oss": [
+      {
+        "tool": "OpenCode",
+        "license": "MIT",
+        "install": "curl -fsSL https://opencode.ai/install | bash",
+        "needs": "Any model provider"
+      },
+      {
+        "tool": "Codex CLI",
+        "license": "Apache-2.0",
+        "install": "npm i -g @openai/codex",
+        "needs": "OpenAI account"
+      },
+      {
+        "tool": "Gemini CLI",
+        "license": "Apache-2.0",
+        "install": "npm i -g @google/gemini-cli",
+        "needs": "Google account — free tier"
+      }
+    ],
+    "trouble": [
+      {
+        "s": "nvm: command not found",
+        "f": "Close terminal, open new one. Or source ~/.bashrc (mac: ~/.zshrc)."
+      },
+      {
+        "s": "claude: command not found",
+        "f": "Close terminal, open new one. ~90% of cases."
+      },
+      {
+        "s": "command not found right after install",
+        "f": "Close terminal, open new one — PATH updates on new shells."
+      },
+      {
+        "s": "Windows: nothing works in CMD/PowerShell",
+        "f": "You must run inside WSL/Ubuntu, not native Windows."
+      },
+      {
+        "s": "ssh -T git@github.com → Permission denied",
+        "f": "Re-check you pasted the .pub key into GitHub, right account."
+      },
+      {
+        "s": "sudo: command not found (macOS)",
+        "f": "Drop sudo — use brew install instead."
+      },
+      {
+        "s": "Install script blocked",
+        "f": "Antivirus or corporate proxy — try a personal network."
+      }
+    ]
   }
 }

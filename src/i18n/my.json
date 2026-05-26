@@ -287,7 +287,139 @@
     "description": "Vibe Code Tours ၏ ကိုယ်ရေးအချက်အလက် လုံခြုံမှုမူဝါဒ v1.0.0- ကျွန်ုပ်တို့ မည်သည့်အချက်အလက်များကို စုဆောင်းသလဲ၊ ဘာကြောင့် စုဆောင်းသလဲ၊ မည်မျှကြာကြာ သိမ်းဆည်းထားသလဲ၊ မည်သူတို့ မြင်တွေ့နိုင်သလဲ၊ ပြင်ပအဖွဲ့အစည်းများနှင့် သင်၏ အခွင့်အရေးများ။"
   },
   "setup": {
-    "title": "[MY] Setup Guide — Vibe Code Tours",
-    "description": "[MY] Get your machine ready before Chapter 1 — Linux, macOS, or Windows (WSL). Node, Python, Git, Claude Code, editor + extensions."
+    "title": "Setup လမ်းညွှန် — Vibe Code Tours",
+    "description": "Chapter 1 မတိုင်ခင် သင့်စက်ကို ပြင်ဆင်ထားပါ — Linux, macOS သို့မဟုတ် Windows (WSL)။ Node, Python, Git, Claude Code, editor နှင့် extensions များ။",
+    "h1": "တပ်ဆင်မှု လမ်းညွှန်",
+    "intro1": "Chapter 1 မစတင်မီ သင့်စက်ကို အဆင်သင့်ဖြစ်အောင် ပြင်ဆင်ပါ။ ~၄၅–၆၀ မိနစ် (terminal နှင့် အကျွမ်းတဝင်မရှိပါက ၉၀ မိနစ်)။ Linux, macOS နှင့် Windows (WSL မှတစ်ဆင့်) တို့တွင် အလုပ်လုပ်သည်။",
+    "intro2": "သင်သည် code editor တစ်ခု၊ Node, Python, Git နှင့် Claude Code တို့ကို ထည့်သွင်းရမည်ဖြစ်ပြီး အားလုံးကို ပြန်လည်စစ်ဆေးရပါမည်။",
+    "fastH": "အမြန်လမ်းကြောင်း (command တစ်ခုတည်း)",
+    "fastIntro": "Terminal အသုံးပြုရတာ အဆင်ပြေပါသလား? ဤအရာသည် အားလုံးကို ထည့်သွင်းပေးပြီး စစ်ဆေးပေးပါမည် -",
+    "fastTarget": "ထပ်ခါတလဲလဲ run နိုင်ပါသည်။ အဆုံးတွင် Passed: 6, Failed: 0 ဖြစ်ရန် လိုအပ်ပါသည်။",
+    "fastGist": "အရင်းအမြစ်နှင့် ဤလမ်းညွှန်ကို gist တွင် ကြည့်ရှုနိုင်သည်။",
+    "fastWindows": "Windows: WSL ကို အရင်ထည့်သွင်းပါ (အဆင့် ၀)၊ ထို့နောက် Ubuntu ထဲတွင် ၎င်းကို run ပါ။ script သည် editor (အဆင့် ၅) သို့မဟုတ် GitHub SSH (အဆင့် ၆) တို့ကို လုပ်ဆောင်ပေးမည်မဟုတ်ပါ — ၎င်းတို့ကို ကိုယ်တိုင်လုပ်ဆောင်ပါ။",
+    "s0H": "အဆင့် ၀ — Windows အတွက်သာ- WSL ထည့်သွင်းပါ",
+    "s0Body": "Windows ကို တိုက်ရိုက်မပံ့ပိုးပါ — သင်သည် အရာအားလုံးကို WSL (Windows ထဲရှိ တကယ့် Linux) ထဲတွင် run ရပါမည်။ PowerShell (Admin) တွင်-",
+    "s0After": "စက်ကို Restart ချပါ၊ Start မှ Ubuntu ကို ဖွင့်ပါ။ အောက်ပါအချက်အားလုံးကို ထိုနေရာတွင် run ပါ။ macOS / Linux: ဤအဆင့်ကို ကျော်ပါ။",
+    "s1H": "အဆင့် ၁ — Node.js (nvm မှတစ်ဆင့်)",
+    "s1Note": "နံပါတ် ၁ အမှား- nvm ထည့်သွင်းပြီးနောက် terminal ကို ပိတ်ပြီး ပြန်ဖွင့်ရန် မေ့လျော့ခြင်း။ ၎င်းကို လုပ်ဆောင်ပါ။",
+    "s2H": "အဆင့် ၂ — Python (uv မှတစ်ဆင့်)",
+    "s3H": "အဆင့် ၃ — Git",
+    "s4H": "အဆင့် ၄ — Claude Code",
+    "s4Note": "အဆင်ပြေသော ပြန်လည်ဖြေကြားချက် ရရှိပါက သင်၏ ထည့်သွင်းမှု၊ ကွန်ရက်နှင့် အကောင့်အားလုံး အလုပ်လုပ်သည်ဟု ဆိုလိုသည်။",
+    "s5H": "အဆင့် ၅ — Code editor",
+    "s5Intro": "တစ်ခုရွေးပါ (နှစ်ခုလုံး အခမဲ့ဖြစ်ပြီး VS Code အပေါ် အခြေခံထားသဖြင့် extension များမှာလည်း နှစ်ခုလုံးတွင် အလုပ်လုပ်သည်)-",
+    "s5VsCode": "စံနှုန်းသတ်မှတ်ချက်",
+    "s5Antigravity": "Google ၏ AI-ဦးစားပေး editor (VS Code fork)",
+    "s5ExtH": "အကြံပြုထားသော extension များ (ကြိုက်နှစ်သက်ရာတွင် ထည့်သွင်းပါ)",
+    "s5Forks": "Antigravity ကဲ့သို့သော fork များသည် Open VSX registry ကို အသုံးပြုနိုင်သည် — အထက်ပါ အားလုံးမှာ နှစ်ခုလုံးတွင် ရှိသောကြောင့် ရှာဖွေပြီး ထည့်သွင်းခြင်းမှာ အတူတူပင်ဖြစ်သည်။",
+    "colExt": "Extension",
+    "colWhy": "အဘယ်ကြောင့်",
+    "colTool": "Tool",
+    "colLicense": "လိုင်စင်",
+    "colInstall": "ထည့်သွင်းပါ",
+    "colNeeds": "လိုအပ်ချက်များ",
+    "colSymptom": "ရောဂါလက္ခဏာ",
+    "colFix": "ပြုပြင်ရန်",
+    "s6H": "အဆင့် ၆ — GitHub အကောင့် + SSH",
+    "s6Intro": "အန္တရာယ်အရှိဆုံးအဆင့် — စစ်ဆေးမှုကို မကျော်ပါနှင့်။",
+    "s6Never": "Private key (~/.ssh/id_ed25519, .pub မပါသောဖိုင်) ကို ဘယ်တော့မှ မျှဝေခြင်းမပြုပါနှင့်။",
+    "s7H": "အဆင့် ၇ — အားလုံးကို ပြန်လည်စစ်ဆေးပါ",
+    "s7Intro": "စစ်ဆေးပေးမည့် script ကို run ပါ (fast-path script က ၎င်းကို အလိုအလျောက် လုပ်ဆောင်ပေးပါမည်) -",
+    "s7Target": "ရည်မှန်းချက် - Passed: 6, Failed: 0။",
+    "troubleH": "ပြဿနာဖြေရှင်းခြင်း",
+    "troubleStuck": "အဆင်မပြေသေးဘူးလား? အမှား (error) ကို အတိအကျကူးပြီး cohort channel ဖြစ်တဲ့ #setup-help မှာ မေးမြန်းနိုင်ပါတယ်။ error အတိအကျရှိရင် ကူညီရလွယ်ကူပါတယ်၊ \"အလုပ်မလုပ်ဘူး\" ဆိုတာမျိုးကတော့ ကူညီရခက်ပါတယ်။",
+    "ossH": "ရွေးချယ်နိုင်သော အခြား AI coding tools များ (အခမဲ့ / open-source)",
+    "ossIntro": "မဖြစ်မနေ မလိုပါဘူး။ Claude Code က ကျွန်ုပ်တို့ရဲ့ default ဖြစ်ပေမဲ့ ဒီ Tour က AI နယ်ပယ်တစ်ခုလုံးအကြောင်း ဖြစ်တဲ့အတွက် Chapter 7 မှာ အခြားရွေးချယ်စရာတွေကို လေ့လာသွားမှာပါ။ အားလုံးက အခမဲ့နဲ့ open-source တွေ ဖြစ်ပြီး တစ်ခုချင်းစီအတွက် ကိုယ်ပိုင် provider account (အချို့က free tier ရသည်) လိုအပ်ပါတယ်။",
+    "ossNote": "သိထားသင့်တဲ့ အခြားအရာတွေ (ကျွန်ုပ်တို့ install စာရင်းမှာ မပါပါ) - Aider နဲ့ llm - Ollama ကတစ်ဆင့် local open models တွေကို run ပေးတဲ့ open-source CLIs တွေဖြစ်ပြီး လုံးဝအခမဲ့နဲ့ offline အသုံးပြုနိုင်ပါတယ်။ ၎င်းတို့ကို Chapter 7 မှာ ညွှန်းဆိုထားပါတယ်။ အားလုံးကို ပထမရက်မှာတင် install မလုပ်ပါနဲ့ - တစ်ခုကို ရွေးချယ်ပြီး စမ်းသပ်ကြည့်ပါ။",
+    "doneH": "အားလုံးပြီးသွားတဲ့အခါ သင်ရရှိမည့်အရာများ",
+    "doneList": [
+      "VS Code သို့မဟုတ် Antigravity + extensions များ",
+      "Node 22 + npm, Python 3.12 (via uv)",
+      "Git + GitHub SSH ချိတ်ဆက်ပြီး",
+      "Claude Code (ပထမဆုံး command ကို စမ်းသပ်ပြီး)",
+      "စစ်ဆေးချက် ၆ ခုစလုံး Passed (အစိမ်းရောင်) ဖြစ်သွားပြီ"
+    ],
+    "doneTax": "ဒါကတော့ တစ်ကြိမ်ပဲ လုပ်ရမယ့် အလုပ် (tax) ပါ။ တစ်ခါပဲ ပေးဆောင်လိုက်ပါ၊ နောက်ထပ် ပြန်လုပ်စရာ မလိုတော့ပါဘူး။ Chapter 1 မှာ ပြန်တွေ့ကြမယ်။",
+    "back": "← သင်ရိုးညွှန်းတမ်းသို့ ပြန်သွားရန်",
+    "editors": [
+      {
+        "ext": "Python (ms-python.python)",
+        "why": "Python ဘာသာစကား အထောက်အပံ့၊ run/debug"
+      },
+      {
+        "ext": "ESLint + Prettier",
+        "why": "JS/TS linting + အလိုအလျောက် format ပြုလုပ်ခြင်း"
+      },
+      {
+        "ext": "GitLens",
+        "why": "Git history နှင့် blame ကို inline ကြည့်ရှုနိုင်ရန်"
+      },
+      {
+        "ext": "Error Lens",
+        "why": "Error များကို မျဉ်းတားရုံတင်မကဘဲ inline ဖော်ပြပေးရန်"
+      },
+      {
+        "ext": "Markdown All in One",
+        "why": "ဒီ Tour မှာ markdown တွေ အများကြီး ရေးရပါလိမ့်မယ်"
+      },
+      {
+        "ext": "GitHub Pull Requests",
+        "why": "Editor ထဲကနေ ထွက်စရာမလိုဘဲ PR များကို စီမံခန့်ခွဲရန်"
+      },
+      {
+        "ext": "Path Intellisense",
+        "why": "File path များကို အလိုအလျောက် ဖြည့်စွက်ပေးရန်"
+      }
+    ],
+    "oss": [
+      {
+        "tool": "OpenCode",
+        "license": "MIT",
+        "install": "curl -fsSL https://opencode.ai/install | bash",
+        "needs": "မည်သည့် model provider မဆို"
+      },
+      {
+        "tool": "Codex CLI",
+        "license": "Apache-2.0",
+        "install": "npm i -g @openai/codex",
+        "needs": "OpenAI account"
+      },
+      {
+        "tool": "Gemini CLI",
+        "license": "Apache-2.0",
+        "install": "npm i -g @google/gemini-cli",
+        "needs": "Google account — free tier"
+      }
+    ],
+    "trouble": [
+      {
+        "s": "nvm: command not found",
+        "f": "Terminal ကို ပိတ်ပြီး အသစ်ပြန်ဖွင့်ပါ။ သို့မဟုတ် source ~/.bashrc (mac: ~/.zshrc) ကို run ပါ။"
+      },
+      {
+        "s": "claude: command not found",
+        "f": "Terminal ကို ပိတ်ပြီး အသစ်ပြန်ဖွင့်ပါ။ အခြေအနေ ၉၀% လောက်မှာ အဆင်ပြေသွားပါလိမ့်မယ်။"
+      },
+      {
+        "s": "command not found right after install",
+        "f": "Terminal ကို ပိတ်ပြီး အသစ်ပြန်ဖွင့်ပါ — shell အသစ်ဖွင့်မှ PATH update ဖြစ်ပါလိမ့်မယ်။"
+      },
+      {
+        "s": "Windows: nothing works in CMD/PowerShell",
+        "f": "Native Windows မှာ မဟုတ်ဘဲ WSL/Ubuntu ထဲမှာပဲ run ရပါမယ်။"
+      },
+      {
+        "s": "ssh -T git@github.com → Permission denied",
+        "f": ".pub key ကို GitHub ထဲမှာ အကောင့်မှန်အောင် ထည့်ထားသလားဆိုတာ ပြန်စစ်ပါ။"
+      },
+      {
+        "s": "sudo: command not found (macOS)",
+        "f": "sudo ကို ဖြုတ်ပါ — brew install ကိုပဲ သုံးပါ။"
+      },
+      {
+        "s": "Install script blocked",
+        "f": "Antivirus သို့မဟုတ် corporate proxy ကြောင့် ဖြစ်နိုင်ပါတယ် — ကိုယ်ပိုင် network နဲ့ စမ်းကြည့်ပါ။"
+      }
+    ]
   }
 }
