@@ -37,13 +37,19 @@ const links = [
 ].filter((l) => l.show);
 ---
 
-{/*
+{
+  /*
   Pop-out card. In a CSS grid the row height is held by sibling cells, so on
   hover/focus the inner card switches to `absolute` and grows over the row
   below (z-index) without reflowing the grid. tabindex makes it work for
   touch + keyboard, not just mouse hover.
-*/}
-<div class="builder-cell group relative">
+*/
+}
+<div
+  class="builder-cell group relative"
+  data-role={role}
+  data-skills={(skills ?? []).join("|")}
+>
   <article
     tabindex="0"
     class:list={[
@@ -92,7 +98,7 @@ const links = [
     }
 
     <div
-      class="prose-builder mt-3 line-clamp-3 text-sm text-gray-400 group-hover:line-clamp-none group-hover:max-h-72 group-hover:overflow-y-auto group-focus-within:line-clamp-none group-focus-within:max-h-72 group-focus-within:overflow-y-auto"
+      class="prose-builder mt-3 line-clamp-3 text-sm text-gray-400 group-focus-within:line-clamp-none group-focus-within:max-h-72 group-focus-within:overflow-y-auto group-hover:line-clamp-none group-hover:max-h-72 group-hover:overflow-y-auto"
     >
       <slot />
     </div>
